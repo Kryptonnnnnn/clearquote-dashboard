@@ -1,152 +1,216 @@
-ClearQuote CS Dashboard
+# 🚀 ClearQuote CS Dashboard
 
-Internal Customer Success Dashboard — ClearQuote Product Analyst
+Internal Customer Success Dashboard — Product Analyst Assignment
 
-Show Image Show Image Show Image Show Image
+---
 
-📋 Overview
-A browser-based internal dashboard for the ClearQuote Customer Success team. Replaces disconnected spreadsheets with a single, unified view of customer health, product usage, support activity, and fleet data — across 30 fictional last-mile delivery fleets in the US.
+## 📋 Overview
 
-🚀 Quick Start
-Prerequisites
+A browser-based internal dashboard for the **ClearQuote Customer Success team**.
 
-Node.js v18 or higher
-npm v8 or higher
+This project replaces disconnected spreadsheets with a **single unified interface** to monitor:
 
-Installation
-bash# 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/clearquote-dashboard.git
+* Customer health
+* Product usage
+* Support activity
+* Fleet distribution
 
-# 2. Navigate into the project
+Built using **30 fictional last-mile delivery fleets across the US**.
+
+---
+
+## ⚡ Live Demo
+
+👉 https://clearquote-dashboard-r3m3.vercel.app/
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+* Node.js (v18+)
+* npm (v8+)
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/kryptonnnnnn/clearquote-dashboard.git
+
+# Navigate into project
 cd clearquote-dashboard
 
-# 3. Install dependencies
+# Install dependencies
 npm install
 
-# 4. Start the development server
+# Start dev server
 npm run dev
-Then open http://localhost:5173 in your browser.
-Build for Production
-bashnpm run build
-npm run preview
+```
 
-🗂️ Folder Structure
+Open 👉 http://localhost:5173
+
+---
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## 🗂️ Project Structure
+
+```
 clearquote-dashboard/
 │
-├── index.html                  # App entry point
+├── index.html
 ├── package.json
-├── vite.config.ts
 ├── tsconfig.json
 │
 └── src/
-    ├── main.tsx                # React root
-    ├── App.tsx                 # Tab routing
-    ├── types.ts                # TypeScript interfaces
+    ├── main.tsx
+    ├── App.tsx
+    ├── types.ts
     │
     ├── components/
-    │   ├── styles.ts           # Design tokens (colors, shared styles)
-    │   ├── Navbar.tsx          # Top navigation bar
-    │   ├── KpiCard.tsx         # Summary metric cards
-    │   ├── Badge.tsx           # Health / Tier / Priority / Status badges
-    │   ├── FilterBar.tsx       # Search + dropdown filters
-    │   ├── Table.tsx           # Reusable data table
-    │   └── USMap.tsx           # D3 + TopoJSON interactive US map
+    │   ├── styles.ts
+    │   ├── Navbar.tsx
+    │   ├── KpiCard.tsx
+    │   ├── Badge.tsx
+    │   ├── FilterBar.tsx
+    │   ├── Table.tsx
+    │   └── USMap.tsx
     │
     ├── data/
-    │   ├── customers.json      # 30 customer records
-    │   ├── usage.json          # Per-customer usage metrics
-    │   ├── monthly.json        # 15 months of aggregate trends
-    │   ├── tickets.json        # 20 support tickets
-    │   └── fleet.json          # Fleet composition per customer
+    │   ├── customers.json
+    │   ├── usage.json
+    │   ├── monthly.json
+    │   ├── tickets.json
+    │   └── fleet.json
     │
     ├── pages/
-    │   ├── Overview.tsx        # Tab 1 — Customer overview + map
-    │   ├── Usage.tsx           # Tab 2 — Usage metrics + charts
-    │   ├── Support.tsx         # Tab 3 — Support tickets + CSAT
-    │   └── Fleet.tsx           # Tab 4 — Fleet distribution
+    │   ├── Overview.tsx
+    │   ├── Usage.tsx
+    │   ├── Support.tsx
+    │   └── Fleet.tsx
     │
     └── utils/
-        └── helpers.ts          # Shared utility functions
+        └── dataHelpers.ts
+```
 
-📌 Features
-Tab 1 · Customer Overview
+---
 
-KPI strip — total customers, MRR, at-risk count, health breakdown
-Interactive US map with color-coded customer pins (hover for details)
-Filterable customer table — search by name, filter by health / tier / CSM, sort by MRR or status
-Health badges — Healthy / Warning / At Risk
+## 📊 Features
 
-Tab 2 · Usage Metrics
+### 🧩 1. Customer Overview
 
-15-month monthly inspections line chart
-Damage rate % trend line
-Active drivers bar chart (top 8 customers)
-API usage trend
-Per-customer usage detail table with trend arrows
+* KPI metrics (MRR, customers, risk)
+* Health classification (Healthy / Warning / At Risk)
+* Search + filterable table
+* Interactive US map (D3 + TopoJSON)
 
-Tab 3 · Support & Comms
+---
 
-Full ticket list with ID, issue, priority, channel, status, age, CSAT
-Age highlighted red when overdue (> 7 days)
-Star rating CSAT display
-Filter by priority / status / channel
+### 📈 2. Usage Metrics
 
-Tab 4 · Fleet Distribution
+* Monthly inspections trend
+* Damage rate %
+* Active drivers chart
+* API usage trend
 
-Vehicle type donut chart (Van / Truck / Mixed)
-Telematics provider breakdown with progress bars
-FMS platform breakdown
-Fleet age distribution bar chart
-Per-customer fleet table with EV adoption % bar
+---
 
+### 🎧 3. Support Dashboard
 
-🛠️ Tech Stack
-LayerTechnologyFrameworkReact 18 + TypeScriptBuild toolVite 5ChartsRechartsMapD3 v7 + TopoJSONStylingInline styles with shared design tokens (styles.ts)DataStatic JSON (no backend required)
+* Ticket table with:
 
-Why inline styles instead of Tailwind?
-Tailwind requires a PostCSS compilation step. If that step fails silently (common in Vite setups), all styling disappears and you get raw unstyled HTML. Inline styles with a shared design token file guarantee correct rendering regardless of build config — and are equally maintainable at this codebase size.
+  * Priority
+  * Status
+  * Channel
+  * CSAT
+* Aging alerts (>7 days highlighted)
 
+---
 
-📊 Data Model
-All data lives in src/data/ as typed JSON. Tables are joined in the browser using customer_id as the foreign key.
-customers.json  ──┬──► usage.json    (cid → id)
-                  ├──► tickets.json  (cid → id)
-                  └──► fleet.json    (cid → id)
+### 🚚 4. Fleet Analytics
 
-monthly.json  (aggregate — no join needed)
-FileRecordsPurposecustomers.json30Master customer list with health, tier, MRR, CSM, lat/lngusage.json30Per-customer inspection, driver, damage, API metricsmonthly.json15Aggregate monthly trend data (Feb 2025 – Apr 2026)tickets.json20Support tickets with priority, channel, status, CSATfleet.json30Vehicle type, telematics provider, FMS platform, EV %
+* Vehicle type distribution (Pie chart)
+* Telematics providers
+* Fleet age breakdown
+* EV adoption %
 
-🏥 Health Score Logic
-Customer health is computed deterministically in the browser:
-Base score: 100
+---
 
-Usage trend is "down"   →  −30 points
-Open tickets > 3        →  −25 points
-CSAT score < 3.0        →  −20 points
+## 🛠️ Tech Stack
 
-Score > 70  →  🟢 Healthy
-Score 41–70 →  🟡 Warning
-Score ≤ 40  →  🔴 At Risk
+| Layer      | Tech                     |
+| ---------- | ------------------------ |
+| Frontend   | React + TypeScript       |
+| Build Tool | Vite                     |
+| Charts     | Recharts                 |
+| Map        | D3 + TopoJSON            |
+| Styling    | Tailwind / Inline styles |
+| Data       | Static JSON              |
 
-📁 Deliverables
-FileDescriptionclearquote-dashboard-v2.zipFull source code (this repo)ClearQuote_CS_Dashboard_PRD.pdfProduct Requirements Document
+---
 
-📄 PRD Summary
-The PRD (ClearQuote_CS_Dashboard_PRD.pdf) covers:
+## 📦 Data Model
 
-Problem statement and current-state analysis
-Three user personas (CSM, CS Lead, Product Analyst)
-MoSCoW prioritisation of all features
-Data modelling decisions
-Six explicit trade-offs with rationale
-v2 roadmap
-Success metrics
+All data is stored locally in `/src/data`
 
+```
+customers.json  ──┬──► usage.json
+                  ├──► tickets.json
+                  └──► fleet.json
+```
 
-🗺️ Roadmap (v2)
+* Joined using `customer_id`
+* Fully client-side (no backend)
 
- Google SSO — restrict access to @clearquote.io domain
- Real data integration — connect to CRM / product analytics APIs
- Customer drill-down modal — full account profile on click
- Slack / email alerts — notify CSM when health threshold crossed
- Export to CSV / PDF — one-click account health report
+---
+
+## 🧠 Health Score Logic
+
+```text
+Base score = 100
+
+↓ Usage trend        → -30
+> 3 open tickets     → -25
+CSAT < 3             → -20
+```
+
+| Score Range | Status     |
+| ----------- | ---------- |
+| > 70        | 🟢 Healthy |
+| 41–70       | 🟡 Warning |
+| ≤ 40        | 🔴 At Risk |
+
+---
+
+## 📁 Deliverables
+
+* Source code (this repo)
+* PRD Document (included PDF)
+
+---
+
+## 🗺️ Future Improvements
+
+* Google SSO authentication
+* Real backend integration
+* Customer drill-down modal
+* Slack/email alerts
+* Export to CSV/PDF
+
+---
+
+## ⚠️ Notes
+
+* Designed for **Product Analyst assignment**
+* Focus on **data clarity + usability**
+* No backend required
+
+---
