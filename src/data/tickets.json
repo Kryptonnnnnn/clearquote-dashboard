@@ -1,0 +1,22 @@
+[
+  { "id": "TK-001", "cid": 3,  "customer": "SwiftRoute",   "issue": "API timeout errors",           "priority": "High",   "channel": "Slack",  "status": "Open",     "age": 5,  "csat": null },
+  { "id": "TK-002", "cid": 11, "customer": "BoltHaul",      "issue": "Inspection data missing",      "priority": "High",   "channel": "Email",  "status": "Open",     "age": 8,  "csat": null },
+  { "id": "TK-003", "cid": 7,  "customer": "TruckStar",     "issue": "Driver app crashes on login",  "priority": "High",   "channel": "Phone",  "status": "Open",     "age": 3,  "csat": null },
+  { "id": "TK-004", "cid": 2,  "customer": "LogiCore",      "issue": "Usage report discrepancy",     "priority": "Medium", "channel": "Email",  "status": "Pending",  "age": 4,  "csat": null },
+  { "id": "TK-005", "cid": 30, "customer": "MidnightCargo", "issue": "Integration failure",          "priority": "High",   "channel": "Slack",  "status": "Open",     "age": 12, "csat": null },
+  { "id": "TK-006", "cid": 16, "customer": "FastLane",      "issue": "Billing question",             "priority": "Low",    "channel": "Email",  "status": "Resolved", "age": 7,  "csat": 5 },
+  { "id": "TK-007", "cid": 23, "customer": "RiftRoute",     "issue": "Onboarding support",           "priority": "Medium", "channel": "In-app", "status": "Open",     "age": 2,  "csat": null },
+  { "id": "TK-008", "cid": 5,  "customer": "SkyHaul",       "issue": "Dashboard loading slow",       "priority": "Medium", "channel": "Slack",  "status": "Resolved", "age": 6,  "csat": 4 },
+  { "id": "TK-009", "cid": 13, "customer": "CrossTown",     "issue": "Webhook not firing",           "priority": "High",   "channel": "Email",  "status": "Open",     "age": 9,  "csat": null },
+  { "id": "TK-010", "cid": 20, "customer": "DuskRunner",    "issue": "Export CSV broken",            "priority": "Medium", "channel": "In-app", "status": "Open",     "age": 1,  "csat": null },
+  { "id": "TK-011", "cid": 1,  "customer": "FleetX",        "issue": "Feature request: bulk edit",   "priority": "Low",    "channel": "Slack",  "status": "Resolved", "age": 14, "csat": 5 },
+  { "id": "TK-012", "cid": 28, "customer": "GridHaul",      "issue": "Wrong vehicle count",          "priority": "High",   "channel": "Email",  "status": "Open",     "age": 3,  "csat": null },
+  { "id": "TK-013", "cid": 15, "customer": "NovaTrans",     "issue": "SAML SSO config issue",        "priority": "High",   "channel": "Phone",  "status": "Pending",  "age": 6,  "csat": null },
+  { "id": "TK-014", "cid": 10, "customer": "GreenPath",     "issue": "Driver score incorrect",       "priority": "Medium", "channel": "Email",  "status": "Resolved", "age": 10, "csat": 3 },
+  { "id": "TK-015", "cid": 22, "customer": "StarHaul",      "issue": "API rate limit hit",           "priority": "High",   "channel": "Slack",  "status": "Open",     "age": 2,  "csat": null },
+  { "id": "TK-016", "cid": 4,  "customer": "NightOwl",      "issue": "Mobile app not syncing",       "priority": "Low",    "channel": "In-app", "status": "Resolved", "age": 20, "csat": 4 },
+  { "id": "TK-017", "cid": 25, "customer": "ZephyrFleet",   "issue": "CSV import failing",           "priority": "Medium", "channel": "Email",  "status": "Open",     "age": 4,  "csat": null },
+  { "id": "TK-018", "cid": 9,  "customer": "PrimeDelivery", "issue": "Report scheduling bug",        "priority": "Low",    "channel": "Slack",  "status": "Resolved", "age": 15, "csat": 5 },
+  { "id": "TK-019", "cid": 6,  "customer": "QuickFreight",  "issue": "User permission issue",        "priority": "Medium", "channel": "Email",  "status": "Resolved", "age": 8,  "csat": 4 },
+  { "id": "TK-020", "cid": 12, "customer": "RedwoodFleet",  "issue": "API docs unclear",             "priority": "Low",    "channel": "In-app", "status": "Resolved", "age": 11, "csat": 4 }
+]

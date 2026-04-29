@@ -1,0 +1,17 @@
+[
+  { "month": "Feb '25", "inspections": 18200, "damageRate": 2.9, "apiCalls": 1230 },
+  { "month": "Mar '25", "inspections": 18900, "damageRate": 3.0, "apiCalls": 1280 },
+  { "month": "Apr '25", "inspections": 19400, "damageRate": 2.8, "apiCalls": 1310 },
+  { "month": "May '25", "inspections": 20100, "damageRate": 3.1, "apiCalls": 1390 },
+  { "month": "Jun '25", "inspections": 21000, "damageRate": 3.3, "apiCalls": 1450 },
+  { "month": "Jul '25", "inspections": 22400, "damageRate": 3.4, "apiCalls": 1520 },
+  { "month": "Aug '25", "inspections": 21800, "damageRate": 3.2, "apiCalls": 1490 },
+  { "month": "Sep '25", "inspections": 22900, "damageRate": 3.5, "apiCalls": 1580 },
+  { "month": "Oct '25", "inspections": 23500, "damageRate": 3.6, "apiCalls": 1620 },
+  { "month": "Nov '25", "inspections": 22100, "damageRate": 3.4, "apiCalls": 1560 },
+  { "month": "Dec '25", "inspections": 21400, "damageRate": 3.2, "apiCalls": 1510 },
+  { "month": "Jan '26", "inspections": 23000, "damageRate": 3.0, "apiCalls": 1680 },
+  { "month": "Feb '26", "inspections": 24100, "damageRate": 3.1, "apiCalls": 1740 },
+  { "month": "Mar '26", "inspections": 24800, "damageRate": 3.3, "apiCalls": 1790 },
+  { "month": "Apr '26", "inspections": 24600, "damageRate": 3.2, "apiCalls": 1800 }
+]
