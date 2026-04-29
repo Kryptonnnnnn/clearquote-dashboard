@@ -69,7 +69,7 @@ export default function FleetPage() {
           <ResponsiveContainer width="100%" height={230}>
             <PieChart>
               <Pie data={vtypes} dataKey="value" nameKey="name" cx="40%" cy="50%" outerRadius={85} innerRadius={52} paddingAngle={3}
-                label={({ name, percent })=>`${name} ${Math.round(percent*100)}%`} labelLine={false}>
+                label={({ name, percent })=>`${name} ${Math.round((percent ?? 0) * 100)}%`} labelLine={false}>
                 {vtypes.map((_,i)=><Cell key={i} fill={COLORS[i]}/>)}
               </Pie>
               <Tooltip/>
